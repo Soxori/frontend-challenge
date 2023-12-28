@@ -1,0 +1,79 @@
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    grid-gap: 2rem;
+    width: 66%;
+    margin-top: 5%;
+  }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  .image-popular-wrapper {
+    position: relative; /* Add relative positioning here */
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+  
+  .card-img {
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  .card-img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  .popular-label {
+    z-index: 1;
+    position: absolute; /* Correct the typo here */
+    top: 0; /* Position at the top-left corner */
+    left: 0;
+    background: #F6C768; /* Customize as needed */
+    color: black;
+    padding: 3%;
+    font-size: 0.875rem;
+    border-radius:  2rem;
+    margin: 3%;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+  .name-price-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h3 {
+        background: #BEE3CC;
+        color: black;
+        padding: 0.5rem;
+        font-size: 0.875rem;
+        border-radius: 0.5rem;
+        letter-spacing: 1px;
+    }
+  }
+  .card-content {
+    padding: 1rem 0;
+  }
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.35rem 0;
+    .card-footer-left {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      p {
+        margin-left: 1px;
+      }
+    }
+  }
+  .sold-out {
+    color: #ED735D;
+    font-weight: 700;
+  }
+}
