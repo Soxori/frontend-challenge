@@ -11,13 +11,14 @@
   flex-direction: column;
   color: white;
   .image-popular-wrapper {
-    position: relative; /* Add relative positioning here */
+    position: relative; 
     overflow: hidden;
     border-radius: 1rem;
   }
   
   .card-img {
     width: 100%;
+    transform: scale(1.05);
     transition: transform 0.5s ease-in-out;
   }
   .card-img:hover {
@@ -26,10 +27,10 @@
   }
   .popular-label {
     z-index: 1;
-    position: absolute; /* Correct the typo here */
+    position: absolute;
     top: 0; /* Position at the top-left corner */
     left: 0;
-    background: #F6C768; /* Customize as needed */
+    background: #F6C768; 
     color: black;
     padding: 3%;
     font-size: 0.875rem;

@@ -1,5 +1,5 @@
 import "./home.css";
-import CardsRender from "../components/card";
+import CardItems from "../components/cardItems";
 
 export default function home() {
   return (
@@ -14,7 +14,7 @@ export default function home() {
             <br/>batches and shipped fresh weekly.
           </p>
         </div>
-        <CardsRender />
+        <CardItems/>
       </div>
     </div>
   );

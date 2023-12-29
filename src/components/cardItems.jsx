@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./card.css";
+import "./cardItems.css";
 import star from "../svg/Star.svg";
 import starFill from "../svg/Star_fill.svg";
 
@@ -7,6 +7,7 @@ import starFill from "../svg/Star_fill.svg";
 export default function CardsRender() {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch(
@@ -15,15 +16,20 @@ export default function CardsRender() {
       .then((response) => response.json())
       .then((data) => {
         setData(data);
+        setIsLoading(false);
       })
       .catch((error) => {
         setError(error);
+        setIsLoading(false);
       });
   }, []);
 
+   if (isLoading) {
+    return <div>Loading...</div>; // Show loading message
+  }
+
   if (error) {
-    // handle error state
-    return <div>Error loading data</div>;
+    return <div>Error loading data</div>; // Error message
   }
 
   return (
